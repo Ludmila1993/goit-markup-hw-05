@@ -174,8 +174,7 @@ ol {
    }
   
 
-   .nav-list:hover,
-   .nav-list:focus ,
+ 
    .list-link-active::after {
     display: block;
     content: '';
