@@ -8,6 +8,7 @@
   --accent-color: #2e2f42;
   --accent-font: 'Raleway', sans-serif;
   --DAIRY: #FCFCFC;
+
 }
 
 .section {
@@ -618,17 +619,20 @@ ol {
      }
      /*== modal  ==*/
      .modal{
-       position: absolute;
-       width: 408px;
-       min-height: 584px;
-       padding: 24px;
-       border-radius: 4px;
-      background-color: var(--DAIRY);
+      position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
+      width: 408px;
+      min-height: 584px;
+      border-radius: 4px;
+      padding: 72px 24px 24px 24px;
+      background-color: #fcfcfc;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
    
-     }
+    
      .close-btn{
       position: absolute;
       top: 24px;
@@ -650,19 +654,17 @@ ol {
    }
 
    .review-form-fild-wrapper{
-   
+    margin-bottom: 8px ;
    }
 
         /*== modal form  ==*/
    .review-form-description{
-    width: 360;
+    width: 100%;
     color:  #2E2F42;
-    text-align: center;
     margin-bottom: 16px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.5; /* 150% */
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
  
    }
 
@@ -670,16 +672,142 @@ ol {
   position: relative;
 }
 
-.review-form-fild-input{
+.review-form-fild-icon{
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2E2F42;
+ 
 
-  width: 100%;
 }
-
 .review-form-fild-label{
-
+  display: block;
   color:  #8E8F99;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px; /* 116.667% */
   letter-spacing: 0.04em; 
+  margin-bottom: 8px;
+}
+
+
+.review-form-fild-input:focus {
+  border-color:  #4d5ae5;
+  outline: transparent;
+}
+
+
+.review-form-fild-input:focus + .review-form-fild-icon {
+  fill: var(--primary-brand-color);
+}
+
+
+.review-form-fild-input{
+
+  width: 100%;  
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding-left: 38px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.review-form-comment{
+  width: 100%;
+height: 120px;
+border-radius: 4px;
+border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+padding-top: 8px;
+padding-left: 16px;
+padding-right: 16px;
+resize: none;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+font-size: 12px;
+font-weight: 400;
+line-height: 14px; /* 116.667% */
+letter-spacing: 0.04em;
+
+}
+
+.review-form-comment:focus {
+ border-color:  #4d5ae5;
+  outline: transparent; 
+}
+
+.review-form-comment::placeholder{
+  color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+}
+
+.review-form-own-checkbox{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* cursor: pointer; */
+  width: 16px;
+  height: 16px;
+  fill: transparent;
+  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-checkbox:checked + .review-form-checkbxo-label >.review-form-own-checkbox {
+
+  border: none;
+  background-color: var(--pressed-state-color);
+
+  fill: #fcfcfc;
+}
+  
+.review-form-checkbox:focus + .review-form-checkbxo-label >.review-form-own-checkbox {
+
+ outline: 2px solid rgba(0, 0, 255,0.5);
+}
+
+.review-form-checkbxo-label{
+ color:  #8E8F99;
+font-size: 12px;
+font-weight: 400;
+letter-spacing: 0.04pm;
+}
+  
+.accent-color {
+  border-color:  #4d5ae5;
+ 
+}
+
+.review-form-checkbox-wrapper{
+
+  margin-bottom: 24px;
+}
+
+.eview-form-submit{
+  display: block;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 169px;
+    height: 56px;
+    color: var(--main-white);
+    border: none;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border-radius: 4px;
+    background: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
