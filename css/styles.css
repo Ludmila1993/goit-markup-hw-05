@@ -611,6 +611,7 @@ ol {
    
      }
 
+
      .backdrop.is-open{
       opacity: 1;
       visibility: visible;
@@ -666,5 +667,7 @@ ol {
  
    }
 
+.review-form-input-wrapper {
+  position: relative;
+}
 
-   
