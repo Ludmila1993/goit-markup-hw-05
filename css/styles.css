@@ -7,6 +7,7 @@
   --pressed-state-color: #404bbf;
   --accent-color: #2e2f42;
   --accent-font: 'Raleway', sans-serif;
+  --DAIRY: #FCFCFC;
 }
 
 .section {
@@ -590,3 +591,80 @@ ol {
     display: flex;
     gap: 16px;
   }
+
+    /*== Backdrop with modal   ==*/
+
+    .backdrop{
+      position: fixed;
+      z-index: 99999;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color:rgba(46, 47, 66, 0.40);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+
+      transition: opacity 500ms linear,visibility 500ms linear;
+   
+     }
+
+     .backdrop.is-open{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+     }
+     /*== modal  ==*/
+     .modal{
+       position: absolute;
+       width: 408px;
+       min-height: 584px;
+       padding: 24px;
+       border-radius: 4px;
+      background-color: var(--DAIRY);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+   
+     }
+     .close-btn{
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      line-height: 0;
+      background-color:transparent;
+      border: 0;
+      padding: 0;
+     
+
+     }
+  
+     .close-btn:hover,
+     .close-btn:focus{
+      stroke:#2E2F42;
+     }
+   .close-btn-icon{
+    transition: stroke 250ms ease-out;
+   }
+
+   .review-form-fild-wrapper{
+   
+   }
+
+        /*== modal form  ==*/
+   .review-form-description{
+    width: 360;
+    color:  #2E2F42;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.05em;
+ 
+   }
+
+
+   
