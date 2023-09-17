@@ -653,12 +653,17 @@ ol {
 
      }
   
-     .close-btn:hover,
-     .close-btn:focus {
-       background-color: var(--pressed-state-color);
-       border: none;
+     .close-btn:hover{
+      border: none;
+      background-color: #404bbf;
      }
-     
+
+     .close-btn:focus {
+      background-color: #404bbf;
+      border: none;
+
+     }
+
    .close-btn-icon{
     transition: stroke 250ms ease-out;
     width: 8px;
